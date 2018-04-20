@@ -6,25 +6,29 @@
 
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
+import { StackNavigator } from "react-navigation";
+import Login from "./project/views/Components/Login";
+import Register from "./project/views/Components/Register";
+import MainScreen from "./project/views/MainScreen";
 
-import { HELLO_WORLD } from "./project/utils/Strings";
-import { CommonStyle } from "./project/utils/CommonStyle";
-
-const instructions = Platform.select({
-  ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
-  android:
-    "Double tap R on your keyboard to reload,\n" +
-    "Shake or press menu button for dev menu"
-});
+//Creating const for navigation
+const AppNavigator = StackNavigator(
+  {
+    Login: { screen: Login },
+    Register: { screen: Register },
+    MainScreen: { screen: MainScreen }
+  },
+  {
+    navigationOptions: {
+      initialRouteName:"Login",
+      header: false
+    }
+  }
+);
 
 export default class App extends Component {
   render() {
-    const { container, textHeader } = CommonStyle; // destructuring  all the style
-    return (
-      <View style={container}>
-        <Text style={textHeader}>{HELLO_WORLD}</Text>
-      </View>
-    );
+    return <AppNavigator />;
   }
 }
 

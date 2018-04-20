@@ -49,6 +49,11 @@
 		1B0F600605A540628C06A8F7 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1078D0C8F33485CA8FCE213 /* rubicon-icon-font.ttf */; };
 		F29188B7743045D19C30295E /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3515764550464B32A8065345 /* SimpleLineIcons.ttf */; };
 		4DD927851A26430691A72A54 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DC7E35647884548862CCC3F /* Zocial.ttf */; };
+		939D46B8010A408B940CF725 /* FACEBOLF.OTF in Resources */ = {isa = PBXBuildFile; fileRef = D000FD868E9B4E49A4270C87 /* FACEBOLF.OTF */; };
+		15FE7FBDECAD450293D5ED8D /* Lucida Grande Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AD7503100CD43D3A2F81F78 /* Lucida Grande Bold.ttf */; };
+		4ED4A7CE512E43BE919CAAE0 /* Lucida Grande.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B3BC116E0074C4C93232C3E /* Lucida Grande.ttf */; };
+		DE065F89090143E2B97BD1A2 /* MontserratAlternates-Black_0.otf in Resources */ = {isa = PBXBuildFile; fileRef = 91E270718CA5487F9AA69DD8 /* MontserratAlternates-Black_0.otf */; };
+		9B5468D3C18B4921A20AA736 /* MontserratAlternates-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BC90CCEA51404706BA556BD0 /* MontserratAlternates-BlackItalic.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -366,6 +371,11 @@
 		A1078D0C8F33485CA8FCE213 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		3515764550464B32A8065345 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		2DC7E35647884548862CCC3F /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D000FD868E9B4E49A4270C87 /* FACEBOLF.OTF */ = {isa = PBXFileReference; name = "FACEBOLF.OTF"; path = "../project/assets/fonts/FACEBOLF.OTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1AD7503100CD43D3A2F81F78 /* Lucida Grande Bold.ttf */ = {isa = PBXFileReference; name = "Lucida Grande Bold.ttf"; path = "../project/assets/fonts/Lucida Grande Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4B3BC116E0074C4C93232C3E /* Lucida Grande.ttf */ = {isa = PBXFileReference; name = "Lucida Grande.ttf"; path = "../project/assets/fonts/Lucida Grande.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		91E270718CA5487F9AA69DD8 /* MontserratAlternates-Black_0.otf */ = {isa = PBXFileReference; name = "MontserratAlternates-Black_0.otf"; path = "../project/assets/fonts/MontserratAlternates-Black_0.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BC90CCEA51404706BA556BD0 /* MontserratAlternates-BlackItalic.otf */ = {isa = PBXFileReference; name = "MontserratAlternates-BlackItalic.otf"; path = "../project/assets/fonts/MontserratAlternates-BlackItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -643,6 +653,11 @@
 				A1078D0C8F33485CA8FCE213 /* rubicon-icon-font.ttf */,
 				3515764550464B32A8065345 /* SimpleLineIcons.ttf */,
 				2DC7E35647884548862CCC3F /* Zocial.ttf */,
+				D000FD868E9B4E49A4270C87 /* FACEBOLF.OTF */,
+				1AD7503100CD43D3A2F81F78 /* Lucida Grande Bold.ttf */,
+				4B3BC116E0074C4C93232C3E /* Lucida Grande.ttf */,
+				91E270718CA5487F9AA69DD8 /* MontserratAlternates-Black_0.otf */,
+				BC90CCEA51404706BA556BD0 /* MontserratAlternates-BlackItalic.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1106,6 +1121,11 @@
 				1B0F600605A540628C06A8F7 /* rubicon-icon-font.ttf in Resources */,
 				F29188B7743045D19C30295E /* SimpleLineIcons.ttf in Resources */,
 				4DD927851A26430691A72A54 /* Zocial.ttf in Resources */,
+				939D46B8010A408B940CF725 /* FACEBOLF.OTF in Resources */,
+				15FE7FBDECAD450293D5ED8D /* Lucida Grande Bold.ttf in Resources */,
+				4ED4A7CE512E43BE919CAAE0 /* Lucida Grande.ttf in Resources */,
+				DE065F89090143E2B97BD1A2 /* MontserratAlternates-Black_0.otf in Resources */,
+				9B5468D3C18B4921A20AA736 /* MontserratAlternates-BlackItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

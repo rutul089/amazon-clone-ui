@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 // create a component
-class Test extends Component {
+class PostFeeds extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Test</Text>
+                <Text>PostFeeds</Text>
             </View>
         );
     }
@@ -24,4 +24,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-export default Test;
+export default PostFeeds;

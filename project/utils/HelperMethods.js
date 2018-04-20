@@ -37,6 +37,22 @@ export function checkForValidString(str) {
 
 //To check for valid email
 export function checkForValidEmail(email) {
-  var re = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  var re = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
   return re.test(email);
+}
+
+function validateEmail(email) 
+{
+   
+}
+//To check for number validation
+
+export function checkForNumber(number) {
+  var num = /^[0-9]*$/;
+  return num.test(number);
+}
+
+export function empty(string) {
+  var str = /.*\S.*/;
+  return str.test(string);
 }
