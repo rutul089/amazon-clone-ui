@@ -136,20 +136,17 @@ const FbTabNavigator = TabNavigator(
   },
   {
     animationEnabled: true,
-    swipeEnabled: true,
+    swipeEnabled: false,
     tabBarPosition: "bottom",
     tabBarOptions: {
       style: {
-          borderTopWidth:1,
-          borderTopColor:"#d1cece",
-        ...Platform.select({
-          android: {
-            backgroundColor: "white"
-          }
-        })
+        borderTopWidth: 1,
+        borderTopColor: "#d1cece",
+
+        backgroundColor: "#fcfcfcfc"
       },
-      activeTintColor: "#000",
-      inactiveTintColor: "#d1cece",
+      activeTintColor: "#007AFF",
+      inactiveTintColor: "#000",
       showLabel: false,
       showIcon: true
     }

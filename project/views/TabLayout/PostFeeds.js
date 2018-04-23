@@ -16,14 +16,14 @@ import {
   Body
 } from "native-base";
 import { OFF_WHITE } from "../../utils/Color";
-import Path from './../../assets/images/ios-image/path';
-Path
+import Path from "./../../assets/images/ios-image/path";
+Path;
 
 // create a component
 class PostFeeds extends Component {
   static navigationOptions = {
     tabBarIcon: ({ tintColor }) => (
-      <Icon name="ios-home" style={{ color: tintColor }} />
+      <Icon name="newsletter" type="Entypo" style={{ color: tintColor }} />
     )
   };
   render() {
@@ -33,7 +33,7 @@ class PostFeeds extends Component {
           <Card style={{ flex: 0 }}>
             <CardItem>
               <Left>
-                <Thumbnail source={require('./../../assets/images/1.jpg')} />
+                <Thumbnail source={require("./../../assets/images/1.jpg")} />
                 <Body>
                   <Text>NativeBase</Text>
                   <Text note>April 15, 2016</Text>
@@ -43,8 +43,8 @@ class PostFeeds extends Component {
             <CardItem>
               <Body>
                 <Image
-                  source={require('./../../assets/images/feed1.jpg')}
-                  style={{ height: 200, flex: 1 ,resizeMode:'cover'}}
+                  source={require("./../../assets/images/feed1.jpg")}
+                  style={{ height: 200, flex: 1, resizeMode: "cover" }}
                 />
                 <Text>//Your text here</Text>
               </Body>
@@ -61,7 +61,7 @@ class PostFeeds extends Component {
           <Card style={{ flex: 0 }}>
             <CardItem>
               <Left>
-                <Thumbnail source={require('./../../assets/images/3.jpg')} />
+                <Thumbnail source={require("./../../assets/images/3.jpg")} />
                 <Body>
                   <Text>NativeBase</Text>
                   <Text note>April 15, 2016</Text>
@@ -71,8 +71,8 @@ class PostFeeds extends Component {
             <CardItem>
               <Body>
                 <Image
-                  source={require('./../../assets/images/feed3.png')}
-                  style={{ height: 200,resizeMode:'cover', flex: 1 }}
+                  source={require("./../../assets/images/feed3.png")}
+                  style={{ height: 200, resizeMode: "cover", flex: 1 }}
                 />
                 <Text>//Your text here</Text>
               </Body>
@@ -89,7 +89,7 @@ class PostFeeds extends Component {
           <Card style={{ flex: 0 }}>
             <CardItem>
               <Left>
-                <Thumbnail source={require('./../../assets/images/2.jpg')} />
+                <Thumbnail source={require("./../../assets/images/2.jpg")} />
                 <Body>
                   <Text>NativeBase</Text>
                   <Text note>April 15, 2016</Text>
@@ -99,8 +99,8 @@ class PostFeeds extends Component {
             <CardItem>
               <Body>
                 <Image
-                  source={require('./../../assets/images/feed2.jpg')}
-                  style={{ height: 200, resizeMode:'cover', flex: 1 }}
+                  source={require("./../../assets/images/feed2.jpg")}
+                  style={{ height: 200, resizeMode: "cover", flex: 1 }}
                 />
                 <Text>//Your text here</Text>
               </Body>
