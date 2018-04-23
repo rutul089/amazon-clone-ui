@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
+import { Platform, StyleSheet, Text, View ,AsyncStorage} from "react-native";
 import { StackNavigator } from "react-navigation";
 import Login from "./project/views/Components/Login";
 import Register from "./project/views/Components/Register";

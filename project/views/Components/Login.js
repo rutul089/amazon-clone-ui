@@ -5,6 +5,7 @@ import {
   Text,
   StyleSheet,
   Dimensions,
+  AsyncStorage,
   TouchableOpacity
 } from "react-native";
 import {
@@ -24,6 +25,7 @@ import {
   SECONDARY_BLUE
 } from "./../../utils/Color";
 
+import { LOGIN_KEY } from './../../utils/Keys';
 import {
   checkForNumber,
   checkForValidEmail,
@@ -51,6 +53,7 @@ class Login extends Component {
       if (checkForValidEmail(_username)) {
         if (empty(_password)) {
           if (_username == "admin@admin.com" && _password == "1234") {
+            AsyncStorage.setItem(LOGIN_KEY,"true"); // To store flag to check that user is login or not 
             this.props.navigation.navigate("MainScreen");
           } else {
             Toast.show({
@@ -66,6 +69,7 @@ class Login extends Component {
         if (checkForNumber(_username)) {
           if (empty(_password)) {
             if (_username == "123456789" && _password == "1234") {
+              AsyncStorage.setItem(LOGIN_KEY,"true");
               this.props.navigation.navigate("MainScreen");
             } else {
               Toast.show({
@@ -89,6 +93,20 @@ class Login extends Component {
       });
     }
   };
+
+  _loadInitialState = async () => {
+    AsyncStorage.getItem(LOGIN_KEY).then(item => {
+      if (item) {
+        this.props.navigation.navigate("MainScreen");
+      }
+    });
+  };
+
+  componentDidMount() {
+    this._loadInitialState().done();
+  }
+
+
 
   registerActivity = () => {
     this.props.navigation.navigate("Register");

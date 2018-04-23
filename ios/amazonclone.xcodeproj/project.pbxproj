@@ -54,6 +54,7 @@
 		4ED4A7CE512E43BE919CAAE0 /* Lucida Grande.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B3BC116E0074C4C93232C3E /* Lucida Grande.ttf */; };
 		DE065F89090143E2B97BD1A2 /* MontserratAlternates-Black_0.otf in Resources */ = {isa = PBXBuildFile; fileRef = 91E270718CA5487F9AA69DD8 /* MontserratAlternates-Black_0.otf */; };
 		9B5468D3C18B4921A20AA736 /* MontserratAlternates-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BC90CCEA51404706BA556BD0 /* MontserratAlternates-BlackItalic.otf */; };
+		30BF1B974839439DA119A1B9 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB514E28952497C884FB2CD /* MaterialCommunityIcons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -376,6 +377,7 @@
 		4B3BC116E0074C4C93232C3E /* Lucida Grande.ttf */ = {isa = PBXFileReference; name = "Lucida Grande.ttf"; path = "../project/assets/fonts/Lucida Grande.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		91E270718CA5487F9AA69DD8 /* MontserratAlternates-Black_0.otf */ = {isa = PBXFileReference; name = "MontserratAlternates-Black_0.otf"; path = "../project/assets/fonts/MontserratAlternates-Black_0.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		BC90CCEA51404706BA556BD0 /* MontserratAlternates-BlackItalic.otf */ = {isa = PBXFileReference; name = "MontserratAlternates-BlackItalic.otf"; path = "../project/assets/fonts/MontserratAlternates-BlackItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3DB514E28952497C884FB2CD /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../project/assets/fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -658,6 +660,7 @@
 				4B3BC116E0074C4C93232C3E /* Lucida Grande.ttf */,
 				91E270718CA5487F9AA69DD8 /* MontserratAlternates-Black_0.otf */,
 				BC90CCEA51404706BA556BD0 /* MontserratAlternates-BlackItalic.otf */,
+				3DB514E28952497C884FB2CD /* MaterialCommunityIcons.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1126,6 +1129,7 @@
 				4ED4A7CE512E43BE919CAAE0 /* Lucida Grande.ttf in Resources */,
 				DE065F89090143E2B97BD1A2 /* MontserratAlternates-Black_0.otf in Resources */,
 				9B5468D3C18B4921A20AA736 /* MontserratAlternates-BlackItalic.otf in Resources */,
+				30BF1B974839439DA119A1B9 /* MaterialCommunityIcons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
