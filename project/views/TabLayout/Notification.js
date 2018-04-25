@@ -8,7 +8,7 @@ import { OFF_WHITE } from "../../utils/Color";
 class Notification extends Component {
   static navigationOptions = {
     tabBarIcon: ({ tintColor }) => (
-      <Icon name="ios-home" style={{ color: tintColor }} />
+      <Icon name="bell"  type="EvilIcons" style={{ color: tintColor ,fontSize: 35,}} />
     )
   };
   render() {

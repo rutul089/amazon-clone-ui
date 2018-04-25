@@ -1,20 +1,21 @@
 //import liraries
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { Icon } from "native-base";
-import { OFF_WHITE } from "../../utils/Color";
+import { Icon } from 'native-base';
+import { BG_COLOR } from './../../utils/Color';
+
 
 // create a component
-class MyProfile extends Component {
+class MarketPlace extends Component {
   static navigationOptions = {
     tabBarIcon: ({ tintColor }) => (
-      <Icon name="menu" type="SimpleLineIcons" style={{ color: tintColor }} />
+      <Icon name="shop" type="Entypo" style={{ color: tintColor }} />
     )
   };
   render() {
     return (
       <View style={styles.container}>
-        <Text>MyProfile</Text>
+        <Text>MarketPlace</Text>
       </View>
     );
   }
@@ -26,9 +27,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: OFF_WHITE
+    backgroundColor: BG_COLOR
   }
 });
 
 //make this component available to the app
-export default MyProfile;
+export default MarketPlace;

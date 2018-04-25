@@ -1,14 +1,14 @@
 //import liraries
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { Icon } from 'native-base';
+import { Icon } from "native-base";
 import { OFF_WHITE } from "../../utils/Color";
 
 // create a component
 class FriendsRequest extends Component {
   static navigationOptions = {
     tabBarIcon: ({ tintColor }) => (
-      <Icon name="ios-home" style={{ color: tintColor }} />
+      <Icon name="people" type="SimpleLineIcons" style={{ color: tintColor }} />
     )
   };
   render() {

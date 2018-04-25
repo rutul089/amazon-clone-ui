@@ -1,6 +1,13 @@
 //import liraries
 import React, { Component } from "react";
-import { View, StyleSheet, Image } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Image,
+  ScrollView,
+  Dimensions,
+  TextInput
+} from "react-native";
 
 import {
   Container,
@@ -13,11 +20,17 @@ import {
   Button,
   Icon,
   Left,
-  Body
+  Item,
+  Right,
+  Body,
+  Input
 } from "native-base";
-import { OFF_WHITE } from "../../utils/Color";
+import { OFF_WHITE, DARK_TEXT, LIGHT_GRAY } from "../../utils/Color";
 import Path from "./../../assets/images/ios-image/path";
-Path;
+import { BG_COLOR } from "./../../utils/Color";
+import StoryItem from "./../../customComponent/StoryItem";
+import { LIGHT_TEXT } from "./../../utils/Color";
+import { TouchableOpacity } from "react-native";
 
 // create a component
 class PostFeeds extends Component {
@@ -28,92 +41,238 @@ class PostFeeds extends Component {
   };
   render() {
     return (
-      <Container>
+      <Container style={{ backgroundColor: BG_COLOR }}>
         <Content>
-          <Card style={{ flex: 0 }}>
-            <CardItem>
-              <Left>
-                <Thumbnail source={require("./../../assets/images/1.jpg")} />
-                <Body>
-                  <Text>NativeBase</Text>
-                  <Text note>April 15, 2016</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem>
-              <Body>
-                <Image
-                  source={require("./../../assets/images/feed1.jpg")}
-                  style={{ height: 200, flex: 1, resizeMode: "cover" }}
+          {/**
+           *Stories view
+           **/}
+          <View style={styles.container}>
+            <View
+              style={{
+                justifyContent: "space-between",
+                padding: 8,
+                flexDirection: "row"
+              }}
+            >
+              <View>
+                <Text style={[styles.textStyle, { fontWeight: "bold" }]}>
+                  Stories
+                </Text>
+              </View>
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                <Icon
+                  name="ios-play-outline"
+                  style={{ paddingRight: 5, fontSize: 19 }}
                 />
-                <Text>//Your text here</Text>
-              </Body>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent textStyle={{ color: "#87838B" }}>
-                  <Icon active name="thumbs-up" />
-                  <Text>1,926 </Text>
-                </Button>
-              </Left>
-            </CardItem>
-          </Card>
-          <Card style={{ flex: 0 }}>
-            <CardItem>
-              <Left>
-                <Thumbnail source={require("./../../assets/images/3.jpg")} />
-                <Body>
-                  <Text>NativeBase</Text>
-                  <Text note>April 15, 2016</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem>
+                <Text style={styles.textStyle}>Play All</Text>
+              </View>
+            </View>
+            <ScrollView
+              horizontal={true}
+              showsHorizontalScrollIndicator={false}
+            >
+              <StoryItem
+                uriPath={require("./../../assets/images/1.jpg")}
+                userName="Your Story"
+              />
+              <StoryItem
+                uriPath={require("./../../assets/images/2.jpg")}
+                userName="Tony Mony"
+              />
+              <StoryItem
+                uriPath={require("./../../assets/images/3.jpg")}
+                userName="Ring Ring Ring Ring"
+              />
+              <StoryItem
+                uriPath={require("./../../assets/images/4.jpg")}
+                userName="Pinga Porry"
+              />
+              <StoryItem
+                uriPath={require("./../../assets/images/5.jpg")}
+                userName="Chaman Choti"
+              />
+              <StoryItem
+                uriPath={require("./../../assets/images/3.jpg")}
+                userName="Sabse bada gunda"
+              />
+            </ScrollView>
+          </View>
+
+          {/*
+          *Whats in your mind 
+          */}
+          <CardItem
+            style={{
+              marginTop: 10,
+              borderBottomColor: LIGHT_GRAY,
+              borderBottomWidth: 1
+            }}
+          >
+            <Left>
+              <Thumbnail
+                source={require("./../../assets/images/1.jpg")}
+                style={{ borderWidth: 1, borderColor: LIGHT_TEXT }}
+              />
               <Body>
-                <Image
-                  source={require("./../../assets/images/feed3.png")}
-                  style={{ height: 200, resizeMode: "cover", flex: 1 }}
+                <Text style={{ color: DARK_TEXT, fontSize: 18 }}>
+                  What's on your mind?
+                </Text>
+                {/*
+            <TextInput
+                  placeholder="What's on your mind?"
+                  placeholderTextColor={DARK_TEXT}
+                  underlineColorAndroid="transparent"
+                  style={{ color: DARK_TEXT, fontSize: 18 }}
                 />
-                <Text>//Your text here</Text>
+          */}
               </Body>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent textStyle={{ color: "#87838B" }}>
-                  <Icon active name="thumbs-up" />
-                  <Text>1,926 </Text>
-                </Button>
-              </Left>
-            </CardItem>
-          </Card>
-          <Card style={{ flex: 0 }}>
-            <CardItem>
-              <Left>
-                <Thumbnail source={require("./../../assets/images/2.jpg")} />
-                <Body>
-                  <Text>NativeBase</Text>
-                  <Text note>April 15, 2016</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem>
-              <Body>
-                <Image
-                  source={require("./../../assets/images/feed2.jpg")}
-                  style={{ height: 200, resizeMode: "cover", flex: 1 }}
+            </Left>
+          </CardItem>
+          <View
+            style={{
+              backgroundColor: "#fff",
+              flexDirection: "row",
+              flex: 1,
+              padding: 5
+            }}
+          >
+            <TouchableOpacity
+              onPress={() => alert("Video")}
+              style={{
+                flex: 1,
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "row"
+              }}
+            >
+              <View
+                style={{
+                  flex: 1,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "row"
+                }}
+              >
+                <Icon
+                  active
+                  style={{ color: "#EB4043" }}
+                  type="Entypo"
+                  name="video-camera"
                 />
-                <Text>//Your text here</Text>
-              </Body>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent textStyle={{ color: "#87838B" }}>
-                  <Icon active name="thumbs-up" />
-                  <Text>1,926 </Text>
-                </Button>
-              </Left>
-            </CardItem>
-          </Card>
+                <Text style={{ color: "#EB4043", padding: 5 }}>Live</Text>
+              </View>
+            </TouchableOpacity>
+            <View
+              style={{
+                borderRightWidth: 0.5,
+                borderColor: LIGHT_TEXT
+              }}
+            />
+            <TouchableOpacity
+              onPress={() => alert("Photo")}
+              style={{
+                flex: 1,
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "row"
+              }}
+            >
+              <View
+                style={{
+                  flex: 1,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "row"
+                }}
+              >
+                <Icon active style={{ color: "#88BC51" }} name="md-photos" />
+                <Text style={{ color: DARK_TEXT, padding: 5 }}>Photo</Text>
+              </View>
+            </TouchableOpacity>
+            <View
+              style={{
+                borderRightWidth: 0.5,
+                borderColor: LIGHT_TEXT
+              }}
+            />
+            <TouchableOpacity
+              onPress={() => alert("Check In")}
+              style={{
+                flex: 1,
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "row"
+              }}
+            >
+              <View
+                style={{
+                  flex: 1,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "row"
+                }}
+              >
+                <Icon
+                  active
+                  style={{ color: "#EB4043" }}
+                  type="MaterialIcons"
+                  name="location-on"
+                />
+                <Text style={{ color: DARK_TEXT }}>Check In</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+          {/*
+          *Content
+          */}
+          <View style={{ backgroundColor: "#fff", marginTop: 10 }}>
+            <View
+              style={{ backgroundColor: "#fff", marginTop: 10, height: 100 }}
+            >
+              <Text>1</Text>
+            </View>
+          </View>
+          <View style={{ backgroundColor: "#fff", marginTop: 10 }}>
+            <View
+              style={{ backgroundColor: "#fff", marginTop: 10, height: 100 }}
+            >
+              <Text>1</Text>
+            </View>
+          </View>
+          <View style={{ backgroundColor: "#fff", marginTop: 10 }}>
+            <View
+              style={{ backgroundColor: "#fff", marginTop: 10, height: 100 }}
+            >
+              <Text>1</Text>
+            </View>
+          </View>
+          <View style={{ backgroundColor: "#fff", marginTop: 10 }}>
+            <View
+              style={{ backgroundColor: "#fff", marginTop: 10, height: 100 }}
+            >
+              <Text>1</Text>
+            </View>
+          </View>
+          <View style={{ backgroundColor: "#fff", marginTop: 10 }}>
+            <View
+              style={{ backgroundColor: "#fff", marginTop: 10, height: 100 }}
+            >
+              <Text>1</Text>
+            </View>
+          </View>
+          <View style={{ backgroundColor: "#fff", marginTop: 10 }}>
+            <View
+              style={{ backgroundColor: "#fff", marginTop: 10, height: 100 }}
+            >
+              <Text>1</Text>
+            </View>
+          </View>
         </Content>
       </Container>
     );
@@ -123,10 +282,9 @@ class PostFeeds extends Component {
 // define your styles
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: OFF_WHITE
+    height: 160,
+    width: Dimensions.get("window").width,
+    backgroundColor: "#fff"
   }
 });
 

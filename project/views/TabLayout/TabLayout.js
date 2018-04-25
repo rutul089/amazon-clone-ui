@@ -26,13 +26,16 @@ import PostFeeds from "./PostFeeds";
 import FriendsRequest from "./FriendsRequest";
 import Notification from "./Notification";
 import MyProfile from "./MyProfile";
+import MarketPlace from "./MarketPlace";
 import {
+  INACTIVE_TINT_COLOR,
   SEARCH_BAR_ANDROID,
   LIGHT_TEXT,
   SEARCH_BAR_ITEM,
   HEADER_BLUE,
   HEADER_BLUE_IOS,
-  SEARCH_BAR_IOS
+  SEARCH_BAR_IOS,
+  ACTIVE_TINT_COLOR
 } from "./../../utils/Color";
 
 // create a component
@@ -127,6 +130,9 @@ const FbTabNavigator = TabNavigator(
     FriendsRequest: {
       screen: FriendsRequest
     },
+    MarketPlace: {
+      screen: MarketPlace
+    },
     Notification: {
       screen: Notification
     },
@@ -139,14 +145,21 @@ const FbTabNavigator = TabNavigator(
     swipeEnabled: false,
     tabBarPosition: "bottom",
     tabBarOptions: {
+      indicatorStyle: {
+        backgroundColor: "#fff"
+      },
       style: {
         borderTopWidth: 1,
         borderTopColor: "#d1cece",
 
         backgroundColor: "#fcfcfcfc"
       },
-      activeTintColor: "#007AFF",
-      inactiveTintColor: "#000",
+      iconStyle: {
+        width: 30,
+        height: 30
+      },
+      activeTintColor: ACTIVE_TINT_COLOR,
+      inactiveTintColor: INACTIVE_TINT_COLOR,
       showLabel: false,
       showIcon: true
     }
