@@ -18,6 +18,7 @@ export const SECONDARY_BLUE = "#627aad";
 export const OFF_WHITE = "#f2f2f2";
 export const LIGHT_GRAY = "#e2e2e2";
 export const BG_COLOR = "#CFD0D4";
+export const COLOR_ACCENT = "#9A9B9C";
 //5E8FFC 65696C  
 export const ACTIVE_TINT_COLOR = "#5E8FFC";
 export const INACTIVE_TINT_COLOR = "#65696C";

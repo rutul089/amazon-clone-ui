@@ -21,6 +21,7 @@ import {
   Icon,
   Left,
   Item,
+  Spinner,
   Right,
   Body,
   Input
@@ -31,9 +32,65 @@ import { BG_COLOR } from "./../../utils/Color";
 import StoryItem from "./../../customComponent/StoryItem";
 import { LIGHT_TEXT } from "./../../utils/Color";
 import { TouchableOpacity } from "react-native";
-
+import axios from "axios";
+import UserFeeds from "../../customComponent/UserFeeds";
 // create a component
 class PostFeeds extends Component {
+  state = { users: [], results: [], isLoading: true };
+
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    axios
+      .get("https://randomuser.me/api/?results=10")
+      //.then(response =>console.log(response));
+      .then(response =>
+        this.setState({
+          users: response.data,
+          results: response.data.results,
+          isLoading: false
+        })
+      );
+  }
+  Capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+  displayingData() {
+    if (this.state.isLoading) {
+      return (
+        <View
+          style={{
+            width: Dimensions.get("window").width,
+            justifyContent: "center",
+            alignSelf: "center"
+          }}
+        >
+          <Spinner style={{ justifyContent: "center", alignItems: "center" }} />
+        </View>
+      );
+    } else {
+      return this.renderUsers();
+    }
+  }
+
+  renderUsers() {
+    //On click
+    _OnClick = abc => {
+      alert(abc);
+    };
+
+    return this.state.results.map(results => (
+      <StoryItem
+        key={results.email}
+        uriPath={{ uri: results.picture.large }}
+        userName={results.name.first + " " + results.name.last}
+        onClick={() => _OnClick(results.gender)}
+      />
+    ));
+  }
+
   static navigationOptions = {
     tabBarIcon: ({ tintColor }) => (
       <Icon name="newsletter" type="Entypo" style={{ color: tintColor }} />
@@ -49,6 +106,7 @@ class PostFeeds extends Component {
           <View style={styles.container}>
             <View
               style={{
+                width: Dimensions.get("window").width,
                 justifyContent: "space-between",
                 padding: 8,
                 flexDirection: "row"
@@ -77,30 +135,7 @@ class PostFeeds extends Component {
               horizontal={true}
               showsHorizontalScrollIndicator={false}
             >
-              <StoryItem
-                uriPath={require("./../../assets/images/1.jpg")}
-                userName="Your Story"
-              />
-              <StoryItem
-                uriPath={require("./../../assets/images/2.jpg")}
-                userName="Tony Mony"
-              />
-              <StoryItem
-                uriPath={require("./../../assets/images/3.jpg")}
-                userName="Ring Ring Ring Ring"
-              />
-              <StoryItem
-                uriPath={require("./../../assets/images/4.jpg")}
-                userName="Pinga Porry"
-              />
-              <StoryItem
-                uriPath={require("./../../assets/images/5.jpg")}
-                userName="Chaman Choti"
-              />
-              <StoryItem
-                uriPath={require("./../../assets/images/3.jpg")}
-                userName="Sabse bada gunda"
-              />
+              {this.displayingData()}
             </ScrollView>
           </View>
 
@@ -220,7 +255,7 @@ class PostFeeds extends Component {
               >
                 <Icon
                   active
-                  style={{ color: "#EB4043" }}
+                  style={{ color: "#E3186C" }}
                   type="MaterialIcons"
                   name="location-on"
                 />
@@ -231,48 +266,46 @@ class PostFeeds extends Component {
           {/*
           *Content
           */}
-          <View style={{ backgroundColor: "#fff", marginTop: 10 }}>
-            <View
-              style={{ backgroundColor: "#fff", marginTop: 10, height: 100 }}
-            >
-              <Text>1</Text>
-            </View>
-          </View>
-          <View style={{ backgroundColor: "#fff", marginTop: 10 }}>
-            <View
-              style={{ backgroundColor: "#fff", marginTop: 10, height: 100 }}
-            >
-              <Text>1</Text>
-            </View>
-          </View>
-          <View style={{ backgroundColor: "#fff", marginTop: 10 }}>
-            <View
-              style={{ backgroundColor: "#fff", marginTop: 10, height: 100 }}
-            >
-              <Text>1</Text>
-            </View>
-          </View>
-          <View style={{ backgroundColor: "#fff", marginTop: 10 }}>
-            <View
-              style={{ backgroundColor: "#fff", marginTop: 10, height: 100 }}
-            >
-              <Text>1</Text>
-            </View>
-          </View>
-          <View style={{ backgroundColor: "#fff", marginTop: 10 }}>
-            <View
-              style={{ backgroundColor: "#fff", marginTop: 10, height: 100 }}
-            >
-              <Text>1</Text>
-            </View>
-          </View>
-          <View style={{ backgroundColor: "#fff", marginTop: 10 }}>
-            <View
-              style={{ backgroundColor: "#fff", marginTop: 10, height: 100 }}
-            >
-              <Text>1</Text>
-            </View>
-          </View>
+
+          {/*
+          *
+//imgUri,Name,Hour,city,icon(globe or calender),textDisc,image,comments,imagUri,commentName,comment
+          */}
+          <UserFeeds
+            imageUri={require("../../assets/images/1.jpg")}
+            name="Domingo Vega"
+            hour="2 Hours"
+            city="Valencia"
+            iconName="calendar-range"
+            iconType="MaterialCommunityIcons"
+            disc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a velit
+            quis sapien mattis suscipit. Fusce sed tortor at risus eleifend
+            scelerisque sit amet ac turpis. Praesent semper massa at turpis
+            lacinia fermentum. Proin consectetur in nunc sit amet venenatis."
+            bodyImage={require("../../assets/images/feed1.jpg")}
+            comment="14 Comment"
+            senderImage={require("../../assets/images/3.jpg")}
+            commentName="Juho Kauppi"
+            senderComment="Nice photo "
+          />
+
+          <UserFeeds
+            imageUri={require("../../assets/images/3.jpg")}
+            name="Domingo Vega"
+            hour="4 Hours"
+            city="Jerichower land"
+            iconName="globe"
+            disc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a velit
+            quis sapien mattis suscipit. Fusce sed tortor at risus eleifend
+            scelerisque sit amet ac turpis. Praesent semper massa at turpis
+            lacinia fermentum. Proin consectetur in nunc sit amet venenatis."
+            comment="14 Comment"
+            senderImage={require("../../assets/images/4.jpg")}
+            commentName="Aaron Polat"
+            senderComment="sadsadsaodsad"
+          />
+
+         
         </Content>
       </Container>
     );
