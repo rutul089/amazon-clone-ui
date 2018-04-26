@@ -15,21 +15,7 @@ class FriendsRequest extends Component {
   render() {
     return (
      
-      <UserFeeds
-      imageUri={require("../../assets/images/3.jpg")}
-      name="Domingo Vega"
-      hour="4 Hours"
-      city="Jerichower land"
-      iconName="globe"
-      disc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a velit
-    quis sapien mattis suscipit. Fusce sed tortor at risus eleifend
-    scelerisque sit amet ac turpis. Praesent semper massa at turpis
-    lacinia fermentum. Proin consectetur in nunc sit amet venenatis."
-      comment="14 Comment"
-      senderImage={require("../../assets/images/4.jpg")}
-      commentName="Aaron Polat"
-      senderComment="sadsadsaodsad"
-    />
+     <Text>sadsa</Text>
     
     );
   }
