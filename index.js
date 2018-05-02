@@ -6,6 +6,7 @@ import MainScreen from "./project/views/MainScreen";
 import Splash from "./project/views/Components/Splash";
 import Login from "./project/views/Components/Login";
 import Register from "./project/views/Components/Register";
+import ReduxApp from "./project/views/Redux/ReduxApp";
 console.disableYellowBox = true;
 
 
@@ -30,4 +31,4 @@ class Main extends Component {
   }
 }
 
-AppRegistry.registerComponent("amazonclone", () => MainScreen);
+AppRegistry.registerComponent("amazonclone", () => ReduxApp);

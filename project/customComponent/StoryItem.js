@@ -14,8 +14,8 @@ const StoryItem = ({ uriPath, userName, onClick }) => {
         style={{
           borderWidth: 3,
           borderColor: "#4571C6",
-          height: 85,
-          width: 85,
+          height: 70,
+          width: 70,
           borderRadius: 70
         }}
       />
