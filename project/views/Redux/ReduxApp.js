@@ -13,7 +13,7 @@ import LibraryList from "./LibraryList";
 const ReduxApp = () => {
   return (
     <Provider store={createStore(reducers)}>
-      <Container style={{ flex: 1, backgroundColor: BG_COLOR }}>
+      <Container style={{ flex: 1, backgroundColor: "#fff" }}>
         <CustomHeader headerText="Header" />
         {/*asd*/}
         <LibraryList />

@@ -6,12 +6,15 @@ import ListItem from "./../../customComponent/ListItem";
 
 // create a component
 class LibraryList extends Component {
-  componentDidMount() {
+  constructor(props) {
+    super(props);
+  }
+  componentWillMount() {
     const ds = new ListView.DataSource({
-      rowHasChanged: (r1, r2) => r1 != r2
+      rowHasChanged: (r1, r2) => r1 !== r2
     });
 
-    this.setState.dataSource = ds.cloneWithRows(this.props.libraries);
+    this.dataSource = ds.cloneWithRows(this.props.libraries);
   }
 
   renderRow(library) {
@@ -19,9 +22,8 @@ class LibraryList extends Component {
   }
 
   render() {
-    console.log(this.props);
-    return <ListView dataSource={this.dataSource} 
-    renderRow={this.renderRow} />;
+    console.log(this.dataSource);
+    return <ListView dataSource={this.dataSource} renderRow={this.renderRow} />;
   }
 }
 
